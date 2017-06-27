@@ -239,7 +239,7 @@ func main() {
 		}
 	}
 
-	cmd := exec.Command(*cmdPath, "-R", *protocol, "-F", "json", "-q")
+	cmd := exec.Command(*cmdPath, "-G", "-F", "json", "-q")
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
 		log.Fatal(err)
