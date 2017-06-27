@@ -164,9 +164,9 @@ func pageHandler(w http.ResponseWriter, r *http.Request) {
 					mm[name] = &TplMetric{}
 				}
 				mm[name].Humidity = m.Gauge.GetValue()
-				log.Println("HUMI set", name, m.Gauge.GetValue())
 			}
 		}
+		log.Println("HUMI set", mm)
 	}
 
 	t := template.New("index.html")
